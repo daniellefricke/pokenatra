@@ -2,6 +2,6 @@
 
 <% @pokemon.each do |pokemon| %>
 <p class="pokemon">
-  <a href='/pokemon/pokemons'> <%= pokemon.name%></a>
+  <a href='/pokemon/pokemons/<%=pokemon.id%>'> <%= pokemon.name%></a>
 </p>
   <% end %>

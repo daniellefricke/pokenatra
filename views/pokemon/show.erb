@@ -1,7 +1,9 @@
-<h2><a href="/pokemon">Pokemon Profile</h2>
-<div class='pokemon'>
-    <p>Name: <%= @pokemon.name %></p>
-    <p>Type: <%= @pokemon.poke_type %></p>
-    <p>CP: <%= @pokemon.cp %></p>
-    <p> <%= @pokemon.img_url %></p>
-</div>
+<h2><a href="/pokemon/#{@pokemon.id}">Pokemon Profile</h2>
+<!-- This will take you back to the home page -->
+    <div class='pokemon'>
+        <p>Name: <%= @pokemon.name %></p>
+        <p>Type: <%= @pokemon.poke_type %></p>
+        <p>CP: <%= @pokemon.cp %></p>
+        <img src= '<%=@pokemon.img_url %>'</img>
+<!-- Need to determine how to get the image to appear - currently showing URL -->
+    </div>
