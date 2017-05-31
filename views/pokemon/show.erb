@@ -1,9 +1,19 @@
-<h2><a href="/pokemon/#{@pokemon.id}">Pokemon Profile</h2>
+<h2><a href="/pokemon/pokemons">Pokemon Profile</h2>
 <!-- This will take you back to the home page -->
     <div class='pokemon'>
         <p>Name: <%= @pokemon.name %></p>
         <p>Type: <%= @pokemon.poke_type %></p>
         <p>CP: <%= @pokemon.cp %></p>
         <img src= '<%=@pokemon.img_url %>'</img>
-<!-- Need to determine how to get the image to appear - currently showing URL -->
     </div>
+
+
+
+     <div class="edit">
+        <a href="/pokemon/pokemons/<%=@pokemon.id%>/edit">Edit Pokemon</a>
+     </div>
+
+     <form onsubmit="confirm('Are you sure you want to delete this Pokemon?')" action="/pokemon/pokemons/<%=@pokemon.id%>" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit">Delete Pokemon</button>
+      </form>
