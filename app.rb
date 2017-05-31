@@ -14,9 +14,9 @@ get '/pokemon/new' do
     erb :"pokemon/new"
 end
 
-get 'pokemon/pokemons' do
+get '/pokemon/pokemons' do
   @pokemon = Pokemon.all
-  erb :"pokemons/pokemons"
+  erb :"pokemon/pokemons"
 end
 
 get '/pokemon/:id' do
@@ -24,7 +24,7 @@ get '/pokemon/:id' do
     erb :'pokemon/show'
 end
 
-post 'pokemon/pokemons' do
-  @pokemon = Pokemons.create(params[:artist])
+post '/pokemon/pokemons' do
+  @pokemon = Pokemons.create(params[:pokemon])
 redirect "/pokemon/#{@pokemon.id}"
 end
