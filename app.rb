@@ -25,6 +25,6 @@ get '/pokemon/:id' do
 end
 
 post '/pokemon/pokemons' do
-  @pokemon = Pokemons.create(params[:pokemon])
+  @pokemon = Pokemon.create(params[:pokemon])
 redirect "/pokemon/#{@pokemon.id}"
 end
